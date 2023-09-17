@@ -83,7 +83,7 @@ const Newnote = ({ showMenu, setShowMenu, setNotes, notes }) => {
 
         <button
           className={styles.add}
-          disabled={title === "" && content === ""}
+          disabled={title === "" || content === ""}
           onClick={handleSubmit}
         >
           <AiOutlinePlus size={24} />

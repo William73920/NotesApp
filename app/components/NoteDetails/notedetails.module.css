@@ -26,6 +26,8 @@
 }
 
 .notes {
+  width: fit-content;
+
   position: relative;
   overflow-y: auto;
   display: flex;

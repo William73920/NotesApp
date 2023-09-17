@@ -102,3 +102,9 @@ h6 {
 img {
   max-width: 40%;
 }
+
+.quill {
+  border: none;
+  outline: none;
+  width: 100%;
+}
