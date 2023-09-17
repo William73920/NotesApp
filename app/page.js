@@ -28,7 +28,7 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const storedNotes = JSON.parse(localStorage.getItem(currentUser));
+    const storedNotes = JSON.parse(localStorage.getItem(currentUser)) || [];
 
     setNotes(storedNotes);
   }, [currentUser]);
