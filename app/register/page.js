@@ -8,7 +8,7 @@ import { auth, provider } from "../firebase/firebase-config";
 import { useRouter } from "next/navigation";
 import { useAuth } from "../context/authContext";
 
-const page = () => {
+const Page = () => {
   const router = useRouter();
   const { currentUser, isLoading } = useAuth();
 
@@ -88,4 +88,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -9,7 +9,7 @@ import { auth, provider } from "../firebase/firebase-config";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import Loader from "../components/Loader/Loader";
 
-const page = () => {
+const Page = () => {
   const [email, setEmail] = useState("");
   const { currentUser, isLoading } = useAuth();
   const router = useRouter();
@@ -84,4 +84,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
