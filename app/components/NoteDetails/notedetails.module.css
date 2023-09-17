@@ -1,0 +1,67 @@
+.container {
+  color: black;
+  position: fixed;
+  z-index: 1;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.title {
+  font-size: 2rem;
+
+  overflow: hidden;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid gray;
+  padding: 1rem 0;
+
+  white-space: normal;
+}
+
+.notes {
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-wrap: wrap;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.notes h1 {
+  border-bottom: 2px solid grey;
+}
+
+.notes::-webkit-scrollbar {
+  width: 6px;
+}
+
+.notes::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.notes::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 2%;
+  background-color: none;
+  border-radius: 100%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

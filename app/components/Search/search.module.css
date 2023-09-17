@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  padding: 1rem 0.8rem;
+  background-color: white;
+  border-radius: 3rem;
+  position: relative;
+}
+
+.container input {
+  background: none;
+  outline: none;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.filter {
+  cursor: pointer;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  position: absolute;
+  right: 16px;
+  bottom: -30px;
+  min-width: 20%;
+  padding: 1rem;
+  border-radius: 1rem;
+  gap: 1rem;
+}
+
+.filterOptions {
+  padding: 0.25rem;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.filterOptions:hover {
+  background-color: #66b3ff;
+}

@@ -7,6 +7,7 @@ import { useAuth } from "../context/authContext";
 import { useRouter } from "next/navigation";
 import { auth, provider } from "../firebase/firebase-config";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import Loader from "../components/Loader/Loader";
 
 const page = () => {
   const [email, setEmail] = useState("");
@@ -39,7 +40,7 @@ const page = () => {
   };
 
   return isLoading || (!isLoading && currentUser) ? (
-    "loading"
+    <Loader />
   ) : (
     <div className={styles.wrapper}>
       <div className={styles.container}>
