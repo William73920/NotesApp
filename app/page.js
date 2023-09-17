@@ -78,6 +78,7 @@ export default function Home() {
           .filter((note) => note.title.toLowerCase().includes(searchText))
           .map((note, index) => (
             <Note
+              key={index}
               setSelectedNote={setSelectedNote}
               color={note.selectedColor}
               title={note.title}
