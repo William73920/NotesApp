@@ -43,7 +43,7 @@ export default function Home() {
     }
   }, [currentUser, isLoading]);
 
-  return !isLoading && !currentUser ? (
+  return (!isLoading && !currentUser) || isLoading ? (
     <Loader />
   ) : (
     <main className={styles.body}>
