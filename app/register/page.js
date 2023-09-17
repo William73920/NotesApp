@@ -36,13 +36,6 @@ const Page = () => {
     }
   };
 
-  const signInWithGoogle = async () => {
-    try {
-      const result = await signInWithPopup(auth, provider);
-      router.push("/");
-    } catch (error) {}
-  };
-
   return isLoading || (!isLoading && currentUser) ? (
     "loading"
   ) : (
@@ -50,15 +43,6 @@ const Page = () => {
       <div className={styles.container}>
         <div className={styles.heading}>Register</div>
         <div className={styles.register}>
-          <div className={styles.google} onClick={signInWithGoogle}>
-            <FcGoogle size={24} />
-            <span>Signup with Google</span>
-          </div>
-          <div className={styles.secondary}>
-            <span className={styles.first_line}></span>
-            <span className={styles.text}>OR</span>
-            <span className={styles.second_line}></span>
-          </div>
           <form className={styles.form_container} onSubmit={handleSubmit}>
             <input
               type="email"
