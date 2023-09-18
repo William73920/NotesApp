@@ -34,6 +34,7 @@ const Page = () => {
       router.push("/");
     } catch (error) {
       setError(error.code);
+      setTimeout(() => setError(""), 5000);
     }
   };
 

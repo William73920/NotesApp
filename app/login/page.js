@@ -29,7 +29,8 @@ const Page = () => {
       await signInWithEmailAndPassword(auth, email, password);
       setError("");
     } catch (error) {
-      setError("Invalid login credentials");
+      setError(error.code.slice(5));
+      setTimeout(() => setError(""), 5000);
     }
   };
 
