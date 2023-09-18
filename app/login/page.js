@@ -13,6 +13,7 @@ const Page = () => {
   const [email, setEmail] = useState("");
   const { currentUser, isLoading } = useAuth();
   const router = useRouter();
+  const [error, setError] = useState("");
 
   useEffect(() => {
     if (!isLoading && currentUser) {
@@ -26,8 +27,9 @@ const Page = () => {
     const password = e.target[1].value;
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      setError("");
     } catch (error) {
-      console.error(error);
+      setError("Invalid login credentials");
     }
   };
 
@@ -53,6 +55,7 @@ const Page = () => {
               autoComplete="off"
               className={styles.password}
             />
+            {error && <div>{error}</div>}
             <button className={styles.signup}>Sign In</button>
           </form>
           <div className={styles.container2}>

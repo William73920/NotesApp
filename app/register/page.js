@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
@@ -11,6 +11,7 @@ import { useAuth } from "../context/authContext";
 const Page = () => {
   const router = useRouter();
   const { currentUser, isLoading } = useAuth();
+  const [error, setError] = useState("");
 
   useEffect(() => {
     if (!isLoading && currentUser) {
@@ -32,7 +33,7 @@ const Page = () => {
 
       router.push("/");
     } catch (error) {
-      console.error(error);
+      setError(error.code);
     }
   };
 
@@ -58,6 +59,7 @@ const Page = () => {
               autoComplete="off"
               className={styles.password}
             />
+            {error && <div>{error.slice(5)}</div>}
             <button className={styles.signup}>Sign Up</button>
           </form>
           <div className={styles.container2}>
